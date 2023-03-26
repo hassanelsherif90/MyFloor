@@ -2,41 +2,14 @@
 #include <string>
 using namespace std;
 
-
-float GetRefactoinPart (float Number)
-{
-    return Number - int (Number);
-}
-
 float MyFloor(float Number)
 {
-    int IntPart;
-    IntPart = int(Number);
-    float factoinPart = GetRefactoinPart(Number);
-
-    if (abs(factoinPart) >= .5)
-    {
-        if (Number > 0)
-        {
-            return IntPart;
-        } 
-        else 
-        {
-            return --IntPart;
-        }
-    }
+    if (Number > 0)
+        return int(Number);
     else 
-    {
-        if (Number > 0)
-        {
-            return IntPart;
-        } 
-        else 
-        {
-            return --IntPart;
-        }
-    }
+        return int(Number) - 1;
 }
+
 float ReadNumber ()
 {
     float Number;
